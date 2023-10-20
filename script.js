@@ -17,6 +17,17 @@ function getComputerChoice() {
     return computerChoice
 }
 
+
+function getPlayerChoice() {
+    let playerChoice
+    while (playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors') {
+        playerChoice = prompt("Make your play: rock, paper or scissors?");
+        playerChoice = playerChoice.toLowerCase();
+    }
+    
+}
+
+
 function playRound(playerSelection, computerSelection) {
     const drawResult = `Draw!`;
     const lossResult = `You lose, ${computerSelection} beats ${playerSelection}!`;
@@ -39,4 +50,4 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound('rock', getComputerChoice()))
+getPlayerChoice()

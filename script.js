@@ -19,8 +19,8 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     const drawResult = `Draw!`;
-    const lossResult = `You lose! ${computerSelection} beats ${playerSelection}`;
-    const winResult = `You win! ${playerSelection} beats ${computerSelection}`;
+    const lossResult = `You lose, ${computerSelection} beats ${playerSelection}!`;
+    const winResult = `You win, ${playerSelection} beats ${computerSelection}!`;
 
     if (playerSelection === computerSelection ) {
         return drawResult

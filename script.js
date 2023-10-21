@@ -83,9 +83,8 @@ function game() {
         break;
     }
 
-    console.log(
-      `Current score: Player ${playerScore} x Computer ${computerScore}`
-    );
+    console.log(`Score: Player ${playerScore} x Computer ${computerScore}`);
+    console.log(`Round ${roundsPlayed + 1}/5`);
     roundsPlayed++;
   }
 

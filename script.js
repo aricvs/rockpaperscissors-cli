@@ -14,6 +14,7 @@ function getComputerChoice() {
       break;
   }
 
+  console.log(computerChoice);
   return computerChoice;
 }
 
@@ -53,3 +54,14 @@ function playRound(playerSelection, computerSelection) {
     return winResult;
   }
 }
+
+function game() {
+  let roundsPlayed = 0;
+
+  while (roundsPlayed <= 5) {
+    console.log(playRound(getPlayerChoice(), getComputerChoice()));
+    roundsPlayed++;
+  }
+}
+
+game();

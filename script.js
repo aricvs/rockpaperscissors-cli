@@ -20,11 +20,13 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
     let playerChoice
+
     while (playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors') {
         playerChoice = prompt("Make your play: rock, paper or scissors?");
         playerChoice = playerChoice.toLowerCase();
     }
     
+    return playerChoice
 }
 
 

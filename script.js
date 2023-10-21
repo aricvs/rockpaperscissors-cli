@@ -83,6 +83,14 @@ function game() {
     );
     roundsPlayed++;
   }
+
+  if (playerScore > computerScore) {
+    console.log("Winner: Player!");
+  } else if (playerScore < computerScore) {
+    console.log("Winner: Computer!");
+  } else {
+    console.log("Winner: No one! It's a draw!");
+  }
 }
 
 game();

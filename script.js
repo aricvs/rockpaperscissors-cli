@@ -14,7 +14,6 @@ function getComputerChoice() {
       break;
   }
 
-  console.log(computerChoice);
   return computerChoice;
 }
 
@@ -39,27 +38,49 @@ function playRound(playerSelection, computerSelection) {
   const winResult = `You win, ${playerSelection} beats ${computerSelection}!`;
 
   if (playerSelection === computerSelection) {
-    return drawResult;
+    console.log(drawResult);
+    return 0;
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    return lossResult;
+    console.log(lossResult);
+    return 1;
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    return winResult;
+    console.log(winResult);
+    return 2;
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    return lossResult;
+    console.log(lossResult);
+    return 1;
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    return winResult;
+    console.log(winResult);
+    return 2;
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    return lossResult;
+    console.log(lossResult);
+    return 1;
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    return winResult;
+    console.log(winResult);
+    return 2;
   }
 }
 
 function game() {
   let roundsPlayed = 0;
+  let playerScore = 0;
+  let computerScore = 0;
 
-  while (roundsPlayed <= 5) {
-    console.log(playRound(getPlayerChoice(), getComputerChoice()));
+  while (roundsPlayed < 5) {
+    switch (playRound(getPlayerChoice(), getComputerChoice())) {
+      case 0:
+        break;
+      case 1:
+        computerScore++;
+        break;
+      case 2:
+        playerScore++;
+        break;
+    }
+
+    console.log(
+      `Current score: Player ${playerScore} x Computer ${computerScore}`
+    );
     roundsPlayed++;
   }
 }

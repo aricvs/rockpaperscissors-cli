@@ -27,6 +27,7 @@ function getPlayerChoice() {
   ) {
     playerChoice = prompt("Make your play: rock, paper or scissors?");
     playerChoice = playerChoice.toLowerCase();
+    console.clear();
   }
 
   return playerChoice;

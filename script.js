@@ -38,6 +38,10 @@ function playRound(playerSelection, computerSelection) {
   const lossResult = `You lose, ${computerSelection} beats ${playerSelection}!`;
   const winResult = `You win, ${playerSelection} beats ${computerSelection}!`;
 
+  console.log(
+    `You play ${playerSelection} and the computer plays ${computerSelection}`
+  );
+
   if (playerSelection === computerSelection) {
     console.log(drawResult);
     return 0;
